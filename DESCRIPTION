@@ -14,7 +14,8 @@ Imports:
 VignetteBuilder: knitr
 Suggests:
     caret,
-    datasets,  
+    datasets, 
+    e1071,
     knitr,
     randomForest, 
     stats, 
