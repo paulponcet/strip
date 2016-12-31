@@ -2,6 +2,8 @@
 
 [![Travis-CI Build Status](https://travis-ci.org/paulponcet/strip.svg?branch=master)](https://travis-ci.org/paulponcet/strip)
 
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/strip)](http://cran.r-project.org/package=strip)
+
 The strip function deletes components of R model outputs that are useless for specific purposes, such as predict[ing], print[ing], summary[zing], etc. 
 
 The idea is to prevent the size of the model output to grow with the size of the training dataset. 
