@@ -1,6 +1,6 @@
 # strip: lighten your R model outputs
 
-[![Travis-CI Build Status](https://travis-ci.org/paulponcet/strip.svg?branch=master)](https://travis-ci.org/paulponcet/strip)
+[![Travis-CI Build Status](https://travis-ci.org/paulponcet/strip.svg?branch=master)](https://travis-ci.org/paulponcet/strip) [![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/strip)](https://cran.r-project.org/package=strip)
 
 The strip function deletes components of R model outputs that are useless for specific purposes, such as predict[ing], print[ing], summary[zing], etc. 
 
