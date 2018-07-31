@@ -8,7 +8,9 @@ function(object,
          ...)
 {
 
-  keep <- match.arg(tolower(keep), c("everything", "predict", "print", "summary"), several.ok = TRUE)
+  keep <- match.arg(tolower(keep), 
+                    c("everything", "predict", "predictci", "print", "summary"), 
+                    several.ok = TRUE)
   cl <- class(object)
   ca <- object$call
   
@@ -24,6 +26,20 @@ function(object,
     op$fitted.values <- NULL
     op$effects <- NULL
     op$qr$qr <- NULL
+    op$weights <- NULL
+    op$prior.weights <- NULL
+    op$linear.predictors <- NULL
+    
+    attr(op$terms,".Environment") <- NULL
+    attr(op$formula,".Environment") <- NULL
+    
+  } else if ("predictci" %in% keep) {
+    op <- object
+    op$y <- NULL
+    op$model <- NULL
+    #op$residuals <- NULL
+    op$fitted.values <- NULL
+    op$effects <- NULL
     op$weights <- NULL
     op$prior.weights <- NULL
     op$linear.predictors <- NULL

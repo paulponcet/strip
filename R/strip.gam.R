@@ -7,7 +7,9 @@ function(object,
          keep, 
          ...)
 {
-  keep <- match.arg(tolower(keep), c("everything", "predict", "print"), several.ok = TRUE)
+  keep <- match.arg(tolower(keep), 
+                    c("everything", "predict", "print"), 
+                    several.ok = TRUE)
   cl <- class(object)
   ca <- object$call
   
