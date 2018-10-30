@@ -7,7 +7,7 @@
 #' @export
 #' @rdname strip
 #' 
-strip.randomForest <-
+strip_.randomForest <-
 function(object,
          keep, 
          ...)
@@ -61,5 +61,5 @@ function(object,
   
   object <- rlist::list.merge(op, oq)
   class(object) <- cl
-  return(object)
+  object
 }

@@ -7,7 +7,7 @@
 #' @export
 #' @rdname strip
 #' 
-strip.glm <- 
+strip_.glm <- 
 function(object,
          keep, 
          ...)
@@ -63,5 +63,5 @@ function(object,
   
   object <- rlist::list.merge(op, oq)
   class(object) <- cl
-  return(object)
+  object
 }

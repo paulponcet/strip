@@ -2,7 +2,7 @@
 #' @export
 #' @rdname strip
 #' 
-strip.gam <-
+strip_.gam <-
 function(object,
          keep, 
          ...)

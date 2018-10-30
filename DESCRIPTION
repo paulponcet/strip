@@ -1,8 +1,8 @@
 Package: strip
 Type: Package
 Title: Lighten your R Model Outputs
-Version: 0.1.7
-Date: 2018-05-11
+Version: 1.0.0
+Date: 2018-09-30
 Authors@R: person("Paul", "Poncet", , "paulponcet@yahoo.fr", role = c("aut", "cre"))
 Description: The strip function deletes components of R model outputs that are useless for specific purposes, such as predict[ing], print[ing], summary[izing], etc.
 License: MIT + file LICENSE
@@ -22,4 +22,4 @@ Suggests:
     utils
 URL: https://github.com/paulponcet/strip
 BugReports: https://github.com/paulponcet/strip/issues
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.0

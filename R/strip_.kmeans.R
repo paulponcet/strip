@@ -2,7 +2,7 @@
 #' @export
 #' @rdname strip
 #' 
-strip.kmeans <-
+strip_.kmeans <-
 function(object,
          keep, 
          ...)

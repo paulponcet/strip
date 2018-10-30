@@ -88,5 +88,17 @@ function(object,
          keep, 
          ...)
 {
-  UseMethod("strip")
+  strip_(object, keep, ...)
+}
+
+
+#' @export
+#' @rdname strip
+#' 
+strip_ <- 
+function(object, 
+         keep, 
+         ...)
+{
+  UseMethod("strip_")
 }

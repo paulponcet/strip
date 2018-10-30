@@ -2,7 +2,7 @@
 #' @export
 #' @rdname strip
 #' 
-strip.lm <-
+strip_.lm <-
 function(object,
          keep, 
          ...)
@@ -79,5 +79,5 @@ function(object,
   
   object <- rlist::list.merge(op, oq, os)
   class(object) <- cl
-  return(object)
+  object
 }

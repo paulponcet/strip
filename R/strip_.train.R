@@ -2,7 +2,7 @@
 #' @export
 #' @rdname strip
 #' 
-strip.train <-
+strip_.train <-
 function(object,
          keep, 
          use_trim = FALSE, 
@@ -82,5 +82,5 @@ function(object,
   
   object <- rlist::list.merge(op, oq)
   class(object) <- cl
-  return(object)
+  object
 }

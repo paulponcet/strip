@@ -1,8 +1,8 @@
 
-#' @export strip.default
+#' @export
 #' @rdname strip
 #' 
-strip.default <-
+strip_.default <-
 function(object,
          keep, 
          ...)
