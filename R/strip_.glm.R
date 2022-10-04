@@ -39,7 +39,7 @@ function(object,
     op$family$aic <- NULL
     op$family$validmu <- NULL
     op$family$simulate <- NULL
-    attr(op$terms,".Environment") <- NULL
+    #attr(op$terms,".Environment") <- NULL
     attr(op$formula,".Environment") <- NULL
     
   } else {

@@ -30,7 +30,7 @@ function(object,
     op$prior.weights <- NULL
     op$linear.predictors <- NULL
     
-    attr(op$terms,".Environment") <- NULL
+    #attr(op$terms,".Environment") <- NULL
     attr(op$formula,".Environment") <- NULL
     
   } else if ("predictci" %in% keep) {
@@ -44,7 +44,7 @@ function(object,
     op$prior.weights <- NULL
     op$linear.predictors <- NULL
     
-    attr(op$terms,".Environment") <- NULL
+    #attr(op$terms,".Environment") <- NULL
     attr(op$formula,".Environment") <- NULL
     
   } else {

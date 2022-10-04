@@ -1,10 +1,11 @@
 context("Strip")
 
+library(splines)
 test_that("predict.lm works correctly after stripping", {
   set.seed(111)
   mtcars <- datasets::mtcars
   i <- sample(2, nrow(mtcars), replace = TRUE, prob = c(0.8, 0.2))
-  r1 <- stats::lm(mpg ~ ., data = mtcars[i == 1,])
+  r1 <- stats::lm(mpg ~ cyl + ns(disp,2)+hp+drat+wt+qsec+vs+am+gear+carb, data = mtcars[i == 1,])
   r2 <- strip(r1, keep = "predict")
   p1 <- stats::predict(r1, newdata = mtcars[i == 2,])
   p2 <- try(stats::predict(r2, newdata = mtcars[i == 2,]), silent = TRUE)
@@ -27,13 +28,16 @@ test_that("print.lm works correctly after stripping", {
 test_that("predict.glm works correctly after stripping", {
   ldose <- rep(0:5, 2)
   numdead <- c(1, 4, 9, 13, 18, 20, 0, 2, 6, 10, 12, 16)
+  
   sex <- factor(rep(c("M", "F"), c(6, 6)))
+  other<-rnorm(12)
   SF <- cbind(numdead, numalive = 20-numdead)
   ld <- seq(0, 5, 0.1)
-  r1 <- stats::glm(SF ~ sex*ldose, family = binomial)
+  r1 <- stats::glm(SF ~ sex*ldose+ns(other,2), family = binomial)
   r2 <- strip(r1, keep = "predict")
   df <- data.frame(ldose = ld,
-                  sex = factor(rep("M", length(ld)), levels = levels(sex)))
+                  sex = factor(rep("M", length(ld)), levels = levels(sex)),
+                  other=rnorm(length(ld)))
   p1 <- stats::predict(r1, newdata = df, type = "response")
   p2 <- try(stats::predict(r2, newdata = df, type = "response"), silent = TRUE)
   
